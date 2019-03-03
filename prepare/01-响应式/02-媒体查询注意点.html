@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        /*
+            注意：
+                1,编写媒体选择器时，注意顺序的问题，要把媒体选择器写在正常样式之后
+        */
+        #box{
+            background-color: skyblue;
+            width: 200px;
+            height: 200px;
+        }
+
+        @media screen and (max-width: 768px) {
+            #box {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script type="text/javascript">
+    window.onresize = function(){
+        console.log(document.documentElement.clientWidth)
+    }
+</script>
+</html>
